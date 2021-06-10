@@ -2,15 +2,17 @@
 <html class="no-js" lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="vendor/kabob-font-icon/style.css">
   <link rel="stylesheet" href="vendor/css/kabob-bootstrap.min.css">
   <link rel="stylesheet" href="css/example.scss">
-  <title>Bootstrap 4 Starter Pack</title>
+  <title>Kabob-bootstrap EXAMPLE</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md fixed-top bg-white p-0">
+  <nav class="navbar navbar-expand-md fixed-top bg-white py-0 pl-0 pr-3">
     <a class="navbar-brand ml-4 mr-3" href="javascript:;">
       <img src="images/logo.svg" />
     </a>
@@ -29,28 +31,187 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <li class="nav-item mr-4">
+          <a class="nav-link text-gray" href="#"><i class="kf-bell"></i></a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Dropdown</a>
+          <a class="nav-link text-secondary font-size-2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            Dropdown
+            <i class="kf-angle-down font-size-1 ml-2"></i>
+          </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="javascript:;">Item</a>
-            <a class="dropdown-item" href="javascript:;">Item</a>
+            <a class="dropdown-item" href="javascript:;">Item 1</a>
+            <a class="dropdown-item" href="javascript:;">Item 2</a>
           </div>
         </li>
       </ul>
     </div>
   </nav>
-
-  <h1>Test</h1>
+  <div class="body-container d-flex">
+    <aside class="sidebar">
+      <ul class="navbar-nav sidebar-nav">
+        <li class="nav-link text-center p-0">
+          <a href="javascript:;" class="active"><i class="kf-device"></i></a>
+        </li>
+        <li class="nav-link text-center p-0">
+          <a href="javascript:;"><i class="kf-template"></i></a>
+        </li>
+        <li>
+          <div class="dropright dropdown-dark">
+            <a href="javascript:;" class="d-flex align-items-center language-icon-set" data-toggle="dropdown">
+              <i class="kf-language"></i>
+              <i class="kf-angle-down font-size-1 ml-3"></i>
+            </a>
+            <div class="dropdown-menu ml-4">
+              <a href="javascript:;" class="dropdown-item">English</a>
+              <a href="javascript:;" class="dropdown-item">繁體中文</a>
+              <a href="javascript:;" class="dropdown-item">简体中文</a>
+              <a href="javascript:;" class="dropdown-item">日本語</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <main class="main-content p-3">
+      <div class="d-flex align-items-center">
+        <ul class="nav nav-tabs kabob-tabs border-0 px-2">
+          <li class="nav-item">
+            <a href="javascript:;" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;" class="nav-link">Link</a>
+          </li>
+        </ul>
+        <div class="ml-auto d-flex align-items-center">
+          <button class="btn btn-primary btn-sm rounded-circle">
+            <i class="kf-plus"></i>
+          </button>
+          <button class="btn btn-gray btn-sm rounded-circle ml-2">
+            <i class="kf-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header bg-white border-bottom p-0">
+          <div class="border-bottom p-3">
+            <ul class="breadcrumb kabob-breadcrumb w-100 m-0 p-0">
+              <li><a href="javascript:;">Home</a></li>
+              <li><a href="javascript:;">Level 1</a></li>
+              <li><a href="javascript:;">Level 2</a></li>
+            </ul>
+          </div>
+          <div class="d-flex p-3">
+            <div class="ml-auto">
+              <div class="edit-section">
+                <!-- <div class="edit-options d-flex align-items-center">
+                  <a href="javascript:;" class="text-danger">delete</a>
+                  <a href="javascript:;">option 2</a>
+                  <a href="javascript:;">option 1</a>
+                  <a href="javascript:;">Done</a>
+                </div> -->
+                <a href="javascript:;">Select</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-borderless table-spacing">
+              <thead class="thead-light">
+                <tr>
+                  <th class="pt-0">item 1</th>
+                  <th class="pt-0">item 2</th>
+                  <th class="pt-0">item 3</th>
+                  <th class="pt-0">item 4</th>
+                  <th class="pt-0"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-blue-gray">
+                  <td class="align-middle">item text text text</td>
+                  <td class="align-middle">text</td>
+                  <td class="align-middle">2021/01/01</td>
+                  <td class="align-middle">
+                    <a class="font-weight-bold" href="javascript:;">LINK</a>
+                  </td>
+                  <!-- 選單在列表最右邊時加 .pull-right 調整箭頭位置 -->
+                  <td class="align-middle text-right dropdown dropdown-dark pull-right">
+                    <a href="javascript:;" class="btn btn-blue-gray btn-sm btn-borderless text-secondary rounded-circle mr-1"
+                      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="kf-option"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item text-danger" href="javascript:;">delete</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-blue-gray">
+                  <td class="align-middle">item text text text</td>
+                  <td class="align-middle">text</td>
+                  <td class="align-middle">2021/01/01</td>
+                  <td class="align-middle">
+                    <a class="font-weight-bold" href="javascript:;">LINK</a>
+                  </td>
+                  <td class="align-middle text-right dropdown dropdown-dark pull-right">
+                    <a href="javascript:;" class="btn btn-blue-gray btn-sm btn-borderless text-secondary rounded-circle mr-1"
+                      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="kf-option"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item text-danger" href="javascript:;">delete</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-blue-gray">
+                  <td class="align-middle">item text text text</td>
+                  <td class="align-middle">text</td>
+                  <td class="align-middle">2021/01/01</td>
+                  <td class="align-middle">
+                    <a class="font-weight-bold" href="javascript:;">LINK</a>
+                  </td>
+                  <td class="align-middle text-right dropdown dropdown-dark pull-right">
+                    <a href="javascript:;" class="btn btn-blue-gray btn-sm btn-borderless text-secondary rounded-circle mr-1"
+                      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="kf-option"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item text-danger" href="javascript:;">delete</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-blue-gray">
+                  <td class="align-middle">item text text text</td>
+                  <td class="align-middle">text</td>
+                  <td class="align-middle">2021/01/01</td>
+                  <td class="align-middle">
+                    <a class="font-weight-bold" href="javascript:;">LINK</a>
+                  </td>
+                  <td class="align-middle text-right dropdown dropdown-dark pull-right">
+                    <a href="javascript:;" class="btn btn-blue-gray btn-sm btn-borderless text-secondary rounded-circle mr-1"
+                      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="kf-option"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item" href="javascript:;">option 1</a>
+                      <a class="dropdown-item text-danger" href="javascript:;">delete</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <script src="vendor/js/jquery.min.js"></script>
   <script src="vendor/js/bootstrap.bundle.min.js"></script>
